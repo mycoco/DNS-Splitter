@@ -8,6 +8,13 @@ https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgki
 2. 配置 SWitchEnv 监听的端口
 3. 解析域名的规则由 SWitchEnv 接管
 
+#### version
+- 1.0.0.1
+1. 初始化版本
+
+- 1.0.0.2
+1. 修复ip映射关系解析规则
+
 #### 解析规则
 1. 首先,查询域名与ip映射关系
     - 优先查找 单个域名与ip的匹配
