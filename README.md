@@ -2,6 +2,9 @@
 > 基于浏览器流量,将DNS解析规则提升到应用层
 
 1. 浏览器安装 SwitchyOmega 插件
+```
+https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif
+```
 2. 配置 SWitchEnv 监听的端口
 3. 解析域名的规则由 SWitchEnv 接管
 
@@ -23,7 +26,7 @@
 > 类似修改操作系统的 hosts 文件
 4. 指定DNS解析
 > 在[域名与IP映射关系]中未找到域名对应的IP后则使用指定DNS来解析
-* 匹配条件, * 所匹配的域名江使用 [指定DNS] 进行解析,
+* 匹配条件, * 所匹配的域名将使用 [指定DNS] 进行解析,
 - 匹配条件[*],代表所有域名
 - 匹配条件[*abc001.com],代表所有abc001.com域名
 - 匹配条件[*abc001.com;*abc002.com],代表所有abc001.com以及abc002.com域名
