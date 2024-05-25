@@ -18,6 +18,9 @@ https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgki
 
 5. 解析域名的规则由 SwitchEnv 接管
 
+#### TODO
+1. 增加DOH解析域名
+
 #### 更新日志
 - 1.0.0.2
 1. 修复ip映射关系解析规则
