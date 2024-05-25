@@ -20,6 +20,8 @@ https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgki
 
 #### TODO
 1. 增加DOH解析域名
+2. 增加浏览器插件,自动读取SwitchEnv设置的列表
+
 
 #### 更新日志
 - 1.0.0.2
