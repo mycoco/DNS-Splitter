@@ -5,20 +5,31 @@
 ```
 https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif
 ```
-2. 配置 SWitchEnv 监听的端口
-3. 解析域名的规则由 SWitchEnv 接管
+2. 配置插件中的端口为 SwitchEnv 监听的
+![alt text](https://github.com/mycoco/SwitchEnv/blob/main/images/AImage_0001.png)
 
-#### version
-- 1.0.0.1
-1. 初始化版本
+4. 启动 SwitchEnv 且配置环境
+- 新建配置
 
+![alt text](https://github.com/mycoco/SwitchEnv/blob/main/images/AImage_0003.png)
+- 配置列表
+
+![alt text](https://github.com/mycoco/SwitchEnv/blob/main/images/AImage_0002.png)
+
+5. 解析域名的规则由 SwitchEnv 接管
+
+#### 更新日志
 - 1.0.0.2
 1. 修复ip映射关系解析规则
 
+- 1.0.0.1
+1. 初始化版本
+
+
 #### 解析规则
 1. 首先,查询域名与ip映射关系
-    - 优先查找 单个域名与ip的匹配
-    - 其次根据 模糊匹配进行查找
+    - 1.查找 单个域名与ip的匹配
+    - 2.根据 模糊匹配进行查找
 2. 其次,根据匹配条件,使用指定DNS进行解析
 3. 最后,使用操作系统的DNS进行解析
 
