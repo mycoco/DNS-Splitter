@@ -1,9 +1,9 @@
 # SwitchEnv
 > 基于浏览器流量,将DNS解析规则提升到应用层
 
-1. 浏览器安装 SwitchyOmega 插件
+1. 浏览器安装 zeroomega 插件
 ```
-https://chromewebstore.google.com/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif
+https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
 ```
 2. 配置插件中的端口为 SwitchEnv 监听的
 ![alt text](https://github.com/mycoco/SwitchEnv/blob/main/images/AImage_0001.png)
