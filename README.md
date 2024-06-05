@@ -1,7 +1,7 @@
 # SwitchEnv
 > 基于浏览器流量,将DNS解析规则提升到应用层
 
-1. 浏览器安装 zeroomega 插件
+1. 浏览器安装 ZeroOmega 插件
 ```
 https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
 ```
@@ -18,12 +18,18 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 
 5. 解析域名的规则由 SwitchEnv 接管
 
-#### TODO
-1. 增加DOH解析域名
-2. 增加浏览器插件,自动读取SwitchEnv设置的列表
+
 
 
 #### 更新日志
+- 1.0.0.5
+1. 支持按规则指定dns解析域名
+2. 支持按规则指定DoH解析域名
+3. 支持按规则使用HTTP代理
+4. 支持设置开机启动
+5. 支持为浏览器初始化 ZeroOmega 扩展插件
+
+
 - 1.0.0.2
 1. 修复ip映射关系解析规则
 
