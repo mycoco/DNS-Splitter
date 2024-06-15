@@ -1,7 +1,7 @@
 # DNS-Splitter
 > HTTP代理模式下的DNS分流器
 
-1. 浏览器安装 zeroomega 插件
+1. 浏览器安装 ZeroOmega 插件
 ```
 https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
 ```
@@ -25,9 +25,14 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 - 1.0.0.6 
 1. 增加参数设置 [规则未匹配,则使用操作系统的DNS解析], 未勾选的情况下如果未匹配规则,则直接终止解析与请求
 
+
+#### 更新日志
 - 1.0.0.5
-1. 增加DoH
-2. 增加HTTP代理
+1. 支持按规则指定dns解析域名
+2. 支持按规则指定DoH解析域名
+3. 支持按规则使用HTTP代理
+4. 支持设置开机启动
+5. 支持为浏览器初始化 ZeroOmega 扩展插件
 
 - 1.0.0.2
 1. 修复ip映射关系解析规则
