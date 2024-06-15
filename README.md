@@ -18,6 +18,7 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 - 修改DNS分流配置
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
+<<<<<<< HEAD
 5. 解析域名的规则由 DNS-Splitter / DNS 分流器接管
 
 
@@ -25,6 +26,12 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 - 1.0.0.6 
 1. 增加参数设置 [规则未匹配,则使用操作系统的DNS解析], 未勾选的情况下如果未匹配规则,则直接终止解析与请求
 
+=======
+
+
+
+#### 更新日志
+>>>>>>> fbafd620d9d1095d285546554c9be0fb0996b835
 - 1.0.0.5
 1. 支持按规则指定dns解析域名
 2. 支持按规则指定DoH解析域名
@@ -32,6 +39,10 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 4. 支持设置开机启动
 5. 支持为浏览器初始化 ZeroOmega 扩展插件
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbafd620d9d1095d285546554c9be0fb0996b835
 - 1.0.0.2
 1. 修复ip映射关系解析规则
 
