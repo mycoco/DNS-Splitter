@@ -1,29 +1,34 @@
-# SwitchEnv
-> 基于浏览器流量,将DNS解析规则提升到应用层
+# DNS-Splitter
+> HTTP代理模式下的DNS分流器
 
 1. 浏览器安装 zeroomega 插件
 ```
 https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
 ```
-2. 配置插件中的端口为 SwitchEnv 监听的
-![alt text](https://github.com/mycoco/SwitchEnv/blob/main/images/AImage_0001.png)
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0000.png)
 
-4. 启动 SwitchEnv 且配置环境
-- 新建配置
 
-![alt text](https://github.com/mycoco/SwitchEnv/blob/main/images/AImage_0003.png)
-- 配置列表
+2. 配置插件中的端口为 DNS-Splitter 监听的
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0001.png)
 
-![alt text](https://github.com/mycoco/SwitchEnv/blob/main/images/AImage_0002.png)
+4. 启动 DNS-Splitter
+- 分流列表
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0002.png)
 
-5. 解析域名的规则由 SwitchEnv 接管
+- 修改DNS分流配置
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
-#### TODO
-1. 增加DOH解析域名
-2. 增加浏览器插件,自动读取SwitchEnv设置的列表
+5. 解析域名的规则由 DNS-Splitter / DNS 分流器接管
 
 
 #### 更新日志
+- 1.0.0.6 
+1. 增加参数设置 [规则未匹配,则使用操作系统的DNS解析], 未勾选的情况下如果未匹配规则,则直接终止解析与请求
+
+- 1.0.0.5
+1. 增加DoH
+2. 增加HTTP代理
+
 - 1.0.0.2
 1. 修复ip映射关系解析规则
 
@@ -39,10 +44,10 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 3. 最后,使用操作系统的DNS进行解析
 
 
-#### Env List 
-> 可以配置多条解析规则,使用不同的端口
+#### 分流列表
+> 可以配置多条解析规则,使用不同的代理端口来隔离
 
-#### 新增/修改配置
+#### 分流配置
 1. 方案名称, 用于区分规则名称
 2. 监听端口, 用于隔离浏览接管
 3. 域名IP映射关系, 可以实现ip与域名直接映射 
@@ -88,9 +93,10 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 192.168.100.52  *abc112.com;*abc113.com
 ```
 
-#### DNS List 可以预设多条DNS服务器地址
+#### DNS列表
+> 可以预设多条DNS服务器地址
 
-#### About  关于
+#### 关于
 
 
 
