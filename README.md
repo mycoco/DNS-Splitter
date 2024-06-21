@@ -26,6 +26,9 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 
 
 #### 更新日志
+- 1.0.0.7
+1. 优化编译组件dll的参数,提升性能
+
 - 1.0.0.6 
 1. 增加参数设置 [规则未匹配,则使用操作系统的DNS解析], 未勾选的情况下如果未匹配规则,则直接终止解析与请求
 
