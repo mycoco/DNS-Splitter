@@ -13,16 +13,18 @@
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
 3. 浏览器安装 ZeroOmega 代理插件
-* 提供2种安装方式
+* 提供3种安装方式
 
 > a) 谷歌插件应用市场下载
 ```
 https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
 ```
 
-> b) 在设置中初始化
+> b) 在设置中,为浏览器初始化代理插件
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0000.png)
+
+> c) 手动为浏览器安装压缩包里的crx插件
 
 4. 配置【ZeroOmega代理插件】端口为【分流配置】所设置的监听端口
 > 代理协议HTTP, 代理服务127.0.0.1, 代理端口7000 (第二步所设置的端口)
