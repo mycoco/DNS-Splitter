@@ -8,7 +8,7 @@
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0002.png)
 
 2. 修改或新增DNS分流配置
-> 设置【代理端口】,第4步中【ZeroOmega代理插件】需要设置该【代理端口】
+> 设置【监听端口】,第4步中【ZeroOmega代理插件】需要设置【代理端口】为该【监听端口】
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
@@ -64,7 +64,7 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 
 
 #### 分流列表
-> 可以配置多条解析规则,使用不同的代理端口来隔离
+> 可以配置多条解析规则,使用不同的【监听端口】来隔离
 
 #### 分流配置
 1. 方案名称, 用于区分规则名称
