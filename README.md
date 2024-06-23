@@ -1,29 +1,37 @@
 # DNS-Splitter
 > HTTP代理模式下的DNS分流器
 
-1. 浏览器安装 ZeroOmega 插件
-```
-https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
-```
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0000.png)
+* 项目使用说明与版本下载页面
 
-
-2. 配置插件中的端口为 DNS-Splitter 监听的端口
-
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0001.png)
-
-4. 启动 DNS-Splitter
+1. 启动 DNS-Splitter /DNS分流器
 - 分流列表
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0002.png)
 
-- 修改DNS分流配置
+2. 修改或新增DNS分流配置
+> 设置【代理端口】,第4步中【ZeroOmega代理插件】需要设置该【代理端口】
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
+3. 浏览器安装 ZeroOmega 代理插件
+- 提供2种安装方式
 
-5. 解析域名的规则由 DNS-Splitter / DNS 分流器接管
+> a) 谷歌插件应用市场下载
+```
+https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
+```
 
+> b) 在设置中初始化
+
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0000.png)
+
+4. 配置【ZeroOmega代理插件】端口为【分流配置】所设置的监听端口
+> 代理协议HTTP, 代理服务127.0.0.1, 代理端口7000 (第二步所设置的端口)
+
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0001.png)
+
+5. 解析域名的规则由 【DNS-Splitter / DNS分流器】接管
+> 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
 - 1.0.0.7
