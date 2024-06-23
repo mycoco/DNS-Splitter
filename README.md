@@ -1,4 +1,5 @@
-# DNS-Splitter / DNS分流器  HTTP代理模式下的DNS分流器
+# DNS-Splitter 
+## HTTP代理模式下的DNS分流器
 > 项目使用说明与版本下载页面
 
 1. 启动 DNS-Splitter / DNS分流器
