@@ -1,10 +1,8 @@
-# DNS-Splitter
-> HTTP代理模式下的DNS分流器
+# DNS-Splitter / DNS分流器  HTTP代理模式下的DNS分流器
+> 项目使用说明与版本下载页面
 
-* 项目使用说明与版本下载页面
-
-1. 启动 DNS-Splitter /DNS分流器
-- 分流列表
+1. 启动 DNS-Splitter / DNS分流器
+> 分流列表
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0002.png)
 
@@ -14,7 +12,7 @@
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
 3. 浏览器安装 ZeroOmega 代理插件
-- 提供2种安装方式
+* 提供2种安装方式
 
 > a) 谷歌插件应用市场下载
 ```
