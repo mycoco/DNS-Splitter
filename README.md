@@ -35,6 +35,9 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 > 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
+- 1.0.1.0
+1. 支持多语言切换 (简体中文/英文)
+
 - 1.0.0.9
 1. 修复线程与内存泄露.
 
