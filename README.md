@@ -4,10 +4,12 @@
 
 * 流程图
 > 分流所实现的功能
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_001.png)
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_F001.png)
+
 
 > 浏览器插件将流量转发到 DNS-Splitter
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_002.png)
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_F002.png)
+
 
 
 1. 启动 DNS-Splitter / DNS分流器
