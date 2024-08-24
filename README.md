@@ -45,6 +45,9 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 > 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
+- 1.0.1.3
+1. 优化任务栏右下角,鼠标[右键]弹出后失去焦点自动关闭菜单.
+
 - 1.0.1.2
 1. 增加默认公网dns.
 2. 优化界面突出模式: [DNS分流]与[TCP转发].
