@@ -45,6 +45,9 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 > 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
+- 1.0.1.5
+1. 屏蔽F1快捷键,可能系统F1是截图功能.
+
 - 1.0.1.4
 1. 增加设置[允许保存日志],将请求日志写入本地磁盘文件,取消需要重启应用程序.
 2. 增加设置[启用调试模式],将记录更多日志.
