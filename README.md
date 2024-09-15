@@ -45,6 +45,9 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 > 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
+- 1.0.1.6
+1. 方案列表,右键菜单增加[复制方案列表][粘贴方案列表]功能，方便将选中的方案一次性复制出来，应用到其他主机。
+
 - 1.0.1.5
 1. 屏蔽F1快捷键,可能系统F1是截图功能.
 
