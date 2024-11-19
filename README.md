@@ -45,6 +45,10 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 > 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
+- 1.0.1.8
+1. 将dll组件打包到exe内部.
+2. [粘贴方案]之后,如果规则为[启用]状态,且端口未占用,则启动监听.
+
 - 1.0.1.7
 1. 修复内存泄露.
 2. 增加显示连接列表，展示当前建立的连接信息.
