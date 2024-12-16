@@ -45,6 +45,10 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 > 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
+- 1.0.2.1
+1. 增加SplitterHosts用于与浏览器通讯使用
+
+
 - 1.0.2.0
 1. 编辑[方案]后,勾选[启用]后,则需要开启监听模式.
 2. 设置中新增[内存优化]选项,用于优化进程内存耗用.
