@@ -45,6 +45,11 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 > 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
 
 #### 更新日志
+- 1.0.2.2
+1. 增加浏览器插件:SplitterOmega.
+2. 程序为chrome与edge安装浏览器插件.
+3. 方便通过浏览器插件获取DNS分流方案.
+
 - 1.0.2.1
 1. 增加SplitterHosts用于与浏览器通讯使用
 
