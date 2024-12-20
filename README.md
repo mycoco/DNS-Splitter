@@ -18,16 +18,16 @@
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0002.png)
 
 2. 修改或新增DNS分流配置
-> 设置【监听端口】,第4步中【ZeroOmega代理插件】需要设置【代理端口】为该【监听端口】
+> 设置【监听端口】
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
-3. 浏览器安装 ZeroOmega 代理插件
+3. 浏览器安装 SplitterOmega 代理插件
 * 提供3种安装方式
 
 > a) 谷歌插件应用市场下载
 ```
-https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaopdmhkdmcofjmoldfiped
+https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhjapflbhkd
 ```
 
 > b) 在设置中,为浏览器初始化代理插件
@@ -36,13 +36,13 @@ https://chromewebstore.google.com/detail/zeroomega-proxy-switchy-m/pfnededegaaop
 
 > c) 手动为浏览器安装压缩包里的crx插件
 
-4. 配置【ZeroOmega代理插件】端口为【分流配置】所设置的监听端口
-> 代理协议HTTP, 代理服务器127.0.0.1, 代理端口7000 (第二步所设置的端口)
+4. 配置【SplitterOmega代理插件】情景模式
+> 点击【DNS分流器设置】下的【同步方案】,自动将DNS-Splitter中设置的代理方案同步到浏览器插件.(避免用户关注端口)
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0001.png)
 
 5. 解析域名的规则由 【DNS-Splitter / DNS分流器】接管
-> 可以配置多个分流配置,结合【ZeroOmega代理插件】多个情景模式对应多个分流方案的监听端口
+> 应用程序可以配置多个分流配置,结合【SplitterOmega代理插件】多个情景模式.
 
 #### 更新日志
 - 1.0.2.2
