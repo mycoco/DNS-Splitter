@@ -45,6 +45,11 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 > 应用程序可以配置多个分流配置,结合【SplitterOmega代理插件】多个情景模式.
 
 #### 更新日志
+- 1.0.2.3
+1. 增加[复制方案]功能
+2. 优化为浏览器初始化SplitterOmega插件.
+3. 升级浏览器插件,移除默认proxy代理方案.
+
 - 1.0.2.2
 1. 增加浏览器插件:SplitterOmega.
 2. 程序为chrome与edge安装浏览器插件.
