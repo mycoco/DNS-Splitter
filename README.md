@@ -45,6 +45,13 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 > 应用程序可以配置多个分流配置,结合【SplitterOmega代理插件】多个情景模式.
 
 #### 更新日志
+- 1.2.0.2
+1. 增加https代理的支持.
+2. 增加浏览器启动自动获取dns-splitter的分流方案
+3. 修复splitterOmega插件升级导致分流方案丢失.
+4. 优化分流配置里面的规则按优先级排序.
+
+
 - 1.2.0.1
 1. 支持用户自定义规则列表
 2. 支持用户设置规则的优先级
