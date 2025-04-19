@@ -2,6 +2,15 @@
 ## HTTP代理模式下的DNS分流器
 > 当前项目仅提供使用说明与版本下载地址
 
+什么是dns-splitter: dns-splitter是一个代理工具,对请求代理实现分流上网功能.
+关键词：
+1. DNS分流
+2. DNS分流器
+3. DNS分流上网
+4. 基于DNS的分流方案
+5. 解决switchhosts分流场景
+6. 自定义DNS分流规则
+
 * 流程图
 > 分流所实现的功能
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_F001.png)
