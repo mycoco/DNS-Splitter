@@ -2,6 +2,15 @@
 ## HTTP代理模式下的DNS分流器
 > 当前项目仅提供使用说明与版本下载地址
 
+什么是dns-splitter: dns-splitter是一个代理工具,对请求代理实现分流上网功能.
+关键词：
+1. DNS分流
+2. DNS分流器
+3. DNS分流上网
+4. 基于DNS的分流方案
+5. 解决switchhosts分流场景
+6. 自定义DNS分流规则
+
 * 流程图
 > 分流所实现的功能
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_F001.png)
@@ -22,7 +31,12 @@
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0003.png)
 
-3. 浏览器安装 SplitterOmega 代理插件
+3. 修改或新增分流规则
+> 多个匹配规则，使用分号;或,分隔（英文符号;,)
+
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/dns-splitter-v1.png)
+
+4. 浏览器安装 SplitterOmega 代理插件
 * 提供3种安装方式
 
 > a) 谷歌插件应用市场下载
@@ -36,12 +50,12 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 
 > c) 手动为浏览器安装压缩包里的crx插件
 
-4. 配置【SplitterOmega代理插件】情景模式
+5. 配置【SplitterOmega代理插件】情景模式
 > 点击【DNS分流器设置】下的【同步方案】,自动将DNS-Splitter中设置的代理方案同步到浏览器插件.(避免用户关注端口)
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0001.png)
 
-5. 解析域名的规则由 【DNS-Splitter / DNS分流器】接管
+6. 解析域名的规则由 【DNS-Splitter / DNS分流器】接管
 > 应用程序可以配置多个分流配置,结合【SplitterOmega代理插件】多个情景模式.
 
 #### 更新日志
