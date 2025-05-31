@@ -59,6 +59,10 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 > 应用程序可以配置多个分流配置,结合【SplitterOmega代理插件】多个情景模式.
 
 #### 更新日志
+- 1.2.0.4
+1. 修复在方案里面启用禁用规则不生效.
+
+
 - 1.2.0.3
 1. 修复保存配置文件可能不生效.
 2. 设置路由规则,支持dnsmasq-china-list清单(比如非清单内的域名则直接屏蔽).
