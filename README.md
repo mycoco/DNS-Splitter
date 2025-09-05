@@ -59,6 +59,10 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 > 应用程序可以配置多个分流配置,结合【SplitterOmega代理插件】多个情景模式.
 
 #### 更新日志
+- 1.2.0.5
+1. 修复电脑异常断电可能导致配置文件丢失.
+
+
 - 1.2.0.4
 1. 修复在方案里面启用禁用规则不生效.
 
