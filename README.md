@@ -64,11 +64,15 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 #### 更新日志
 - 1.2.0.6
 1. 增加高级功能
+
 * TLS 支持
 * 自动生成与解析证书
 * 权限校验（用户名/密码认证）
 * 源 IP 校验
 
+
+- 1.2.0.5
+1. 修复电脑异常断电可能导致配置文件丢失.
 
 - 1.2.0.4
 1. 修复在方案里面启用禁用规则不生效.
