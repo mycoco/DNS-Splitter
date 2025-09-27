@@ -283,3 +283,6 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 
 
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mycoco/DNS-Splitter&type=Date)](https://www.star-history.com/#mycoco/DNS-Splitter&Date)
