@@ -2,15 +2,14 @@
 ## HTTP代理模式下的DNS分流器
 > 当前项目仅提供使用说明与版本下载地址
 
-什么是dns-splitter: dns-splitter是一个代理工具,对请求代理实现分流上网功能.
-关键词：
-1. DNS分流
-2. DNS分流器
-3. DNS分流上网
-4. 基于DNS的分流方案
-5. 解决switchhosts分流场景
-6. 自定义DNS分流规则
-7. TLS加密,用户权限认证,源地址校验
+什么是dns-splitter: dns-splitter是一个多端口代理工具,对请求代理实现分流上网功能. 用于满足开发与测试等的多环境同时连接。
+
+#### 主要功能
+1. 同时监听多个端口（监听TLS，权限、源地址校验）
+2. 设置ip与host映射，不同环境可以设置不同的值
+3. 设置分流匹配规则： doh、dns、http(s)代理、使用系统解析，丢弃请求等分流
+4. 浏览器插件同步分流方案
+
 
 * 流程图
 > 分流所实现的功能
@@ -37,7 +36,13 @@
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/dns-splitter-v1.png)
 
-4. 浏览器安装 SplitterOmega 代理插件
+4. 监听端口高级设置
+> 支持监听TLS、权限、源地址校验
+
+![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0004.png)
+
+
+5. 浏览器安装 SplitterOmega 代理插件
 * 提供3种安装方式
 
 > a) 谷歌插件应用市场下载
@@ -51,32 +56,28 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 
 > c) 手动为浏览器安装压缩包里的crx插件
 
-5. 配置【SplitterOmega代理插件】情景模式
+6. 配置【SplitterOmega代理插件】情景模式
 > 点击【DNS分流器设置】下的【同步方案】,自动将DNS-Splitter中设置的代理方案同步到浏览器插件.(避免用户关注端口)
 
 ![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0001.png)
 
-6. 解析域名的规则由 【DNS-Splitter / DNS分流器】接管
+7. 解析域名的规则由 【DNS-Splitter / DNS分流器】接管
 > 应用程序可以配置多个分流配置,结合【SplitterOmega代理插件】多个情景模式.
-
 
 
 #### 更新日志
 - 1.2.0.6
 1. 增加高级功能
-
-* TLS 支持
-* 自动生成与解析证书
-* 权限校验（用户名/密码认证）
-* 源 IP 校验
-
+1.1  TLS 支持
+1.2  自动生成与解析证书
+1.3  权限校验（用户名/密码认证）
+1.4  源 IP 校验
 
 - 1.2.0.5
 1. 修复电脑异常断电可能导致配置文件丢失.
 
 - 1.2.0.4
 1. 修复在方案里面启用禁用规则不生效.
-
 
 - 1.2.0.3
 1. 修复保存配置文件可能不生效.
@@ -183,28 +184,27 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 - 1.0.0.1
 1. 初始化版本.
 
-## 高级设置功能说明
+#### 高级设置功能说明
 
 在 `DNS-Splitter` 中新增了 **高级设置**，用于增强代理服务的 **安全性** 与 **可控性**。
 
-### 1. TLS 支持
+#### 1. TLS 支持
 
 * **功能**：监听 TCP 端口时，可选择是否启用 TLS 加密。
 * **价值**：提升数据传输安全性，避免明文流量在公网环境下被窃听或篡改。
 * **补充**：支持加载已有证书，也支持自动生成测试证书，降低使用门槛。
 
-### 2. 自动生成与解析证书
+#### 2. 自动生成与解析证书
 
 * **功能**：可自动生成自签名证书，并解析显示证书的详细信息（如 CN、颁发者、有效期等）。
 * **价值**：帮助用户快速完成证书配置，同时可直观确认证书信息是否正确。
 
-### 3. 权限校验（用户名/密码认证）
+#### 3. 权限校验（用户名/密码认证）
 
 * **功能**：支持启用代理访问的用户名和密码校验，可配置多个用户。
 * **价值**：防止未授权访问代理服务，提升安全性。
-* **补充**：推荐使用强密码，生产环境建议结合加密存储（如哈希）提升安全性。
 
-### 4. 源 IP 校验
+#### 4. 源 IP 校验
 
 * **功能**：支持启用源 IP 校验，配置允许的 IP 或 CIDR 段，非白名单 IP 将被拒绝访问。
 * **价值**：为内网或小范围部署提供更轻量级的安全控制。
@@ -213,11 +213,11 @@ https://chromewebstore.google.com/detail/splitteromega/ploedkalbbpgnejmmdoejdhja
 
 ---
 
-### 使用建议
+#### 使用建议
 
 * **内网环境**：仅启用 IP 校验即可，简单高效。
 * **公网环境**：推荐同时启用 TLS、权限校验和 IP 白名单，确保代理服务安全。
-
+---
 
 #### 解析规则
 1. 首先,查询域名与ip映射关系
