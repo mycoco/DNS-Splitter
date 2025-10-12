@@ -3,6 +3,16 @@ DNS-Splitter
 DNS-Splitter is a Windows client-side intelligent DNS and proxy splitter designed to improve productivity in complex multi-environment network scenarios.
 It provides a flexible and efficient way to manage multiple proxy and DNS routing strategies under an HTTP proxy mode.
 
+
+#### 其他链接
+
+| 类型      | 文件                             | 说明          |
+| ------- | ------------------------------ | ----------- |
+| 📝 中文文档 | [README_zh_CN.md](./README_zh_CN.md) | 中文文档 |
+| 🧭 帮助文档 | [help.md](./help.md)           | 使用指南与功能说明   |
+| 📝 更新日志 | [changelog.md](./changelog.md) | 版本更新记录与变更历史 |
+
+
 <img width="973" height="835" alt="image" src="https://github.com/user-attachments/assets/d98d5029-b022-4b96-b4fe-fdc5c9e0ee22" />
 
 
