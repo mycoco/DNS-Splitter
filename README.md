@@ -1,108 +1,61 @@
-# DNS-Splitter 
-## HTTP代理模式下的DNS分流器
-> 当前项目仅提供使用说明与版本下载地址
+DNS-Splitter
 
-什么是dns-splitter: 是一个多端口代理工具,对请求代理实现分流上网功能. 用于满足开发与测试等的多环境同时连接。
-
-#### 主要功能
-1. 同时监听多个端口（监听TLS，权限、源地址校验）
-2. 设置ip与host映射，不同环境可以设置不同的值
-3. 设置分流匹配规则： doh、dns、http(s)代理、使用系统解析，丢弃请求等分流
-4. 浏览器插件同步分流方案
-
-
-> 分流与规则设置
-
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/dns-splitter-v1.png)
-
-
-> 分流高级设置
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_0004.png)
-
-
-
-* 流程图
-> 分流所实现的功能
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_F001.png)
-
-
-> 浏览器插件将流量转发到 DNS-Splitter
-![alt text](https://github.com/mycoco/DNS-Splitter/blob/main/images/AImage_F002.png)
-
-
-## DNS-Splitter 和 SwitchHosts 对比
-#### 一、总体定位对比
-| 项目               | 主要功能定位                          | 运行层级                    | 适用场景                         |
-| ---------------- | -------------------------------------- | -------------------------- | ---------------------------- |
-| **SwitchHosts** | 管理并切换系统 `hosts` 文件              | 操作系统层面（直接修改系统 hosts 文件） | 手动切换不同环境（开发 / 测试 / 线上）的域名映射  |
-| **DNS-Splitter** | 自定义 DNS 分流 + HTTP(S)/SOCKS 代理分流 | 网络层（本地代理服务器）            | 根据规则将域名请求分流到不同的 DNS/DoH/代理服务 |
-
-#### 二、工作原理对比
-
-| 对比项       | **SwitchHosts!**                                          | **DNS-Splitter**                         |
-| --------- | ------------------------------------------------------------- | ---------------------------------------- |
-| **解析方式**  | 修改系统 hosts 文件 → 系统 DNS 解析生效                               | 监听本地端口（如 127.0.0.1:1080）→ 自行解析与代理请求 |
-| **作用范围**  | 只影响系统级别（所有程序共享）                                           | ✅仅影响经过该代理的流量（浏览器、curl等）                   |
-| **DNS来源** | 系统默认 DNS                                                  | ✅可自定义多组 DNS / DoH / DoT / 代理链             |
-| **生效机制**  | 覆盖 `/etc/hosts` 或 `C:\Windows\System32\drivers\etc\hosts` | ✅ 作为“中间层”DNS代理进行转发、劫持、分流                   |
-| **切换速度**  | 修改文件后需刷新DNS缓存                                             | ✅ 实时生效，无需刷新                                |
-| **粒度**    | 全局层级（系统共享 hosts）                                          | ✅细粒度控制（不同域名不同策略）                          |
-
-
-#### 三、性能与资源占用
-| 指标              | **SwitchHosts**                  | **DNS-Splitter** | 差异说明                                         |
-| --------------- | --------------------------------- | ---------------- | -------------------------------------------- |
-| **进程数量**        | ~6 个进程（主程序 + Node 子进程 + Chromium） | ✅ 1 个进程            | Electron 架构天生多进程                             |
-| **启动内存占用**      | ≈150 MB                           | ✅ ≈30 MB           | SwitchHosts 启动会加载完整 Chromium 引擎导致内存占用大             |
-| **安装包体积**       | ≈70 MB                            | ✅ ≈10.6 MB         | Electron 打包自带浏览器内核                           |
-| **启动速度**        | 约2–3秒（需加载UI）                 | ✅ <0.5秒            | DNS-Splitter 使用 C++ 启动极快                            |
-
-
-#### 四、主要功能对比
-
-| 功能                   | SwitchHosts  | DNS-Splitter                    |
-| -------------------- | ------------- | ------------------------------- |
-| Hosts 规则管理               | ✅ 支持分组管理与快速切换 | ✅ 支持 hosts 语法，但更强大（可与DNS/代理组合）  |
-| DNS 分流                    | ❌ 不支持         | ✅ 支持（域名 → 指定 DNS / DoH / Proxy） |
-| HTTPS / DoH / DoT 支持      | ❌             | ✅ 支持多种安全 DNS 协议                 |
-| 代理支持                    | ❌             | ✅ 支持 HTTP / HTTPS 代理链  |
-| 用户认证（代理）             | ❌             | ✅ 支持用户名密码校验                     |
-| TLS证书生成与解析           | ❌             | ✅ 可选支持（用于HTTPS监听）               |
-| 域名匹配丢弃请求            | ❌            | ✅ 支持 | 可阻止访问特定域名（广告屏蔽、防泄露等） |
-| 未匹配规则回退              | ❌            | ✅ 使用系统默认 DNS | 规则未覆盖的域名仍可正常解析，保证兼容性 |
-| 自动切换规则                | ✅（手动切换）  | ✅（自动根据匹配规则分流）                   |
-| 界面管理                   | ✅ GUI 友好      | ✅ GUI （MFC）            |
-| 域名映射                   | 一个域名只能映射一个ip         | ✅一个域名可映射多个ip，多环境共存    |
-
-
-#### 五、hosts语法示例对比
-
-| 功能 | SwitchHosts 格式 | DNS-Splitter 格式 |
-|------|-------------------|-------------------|
-| 单域名 | `127.0.0.1 example.com` | `127.0.0.1 example.com` |
-| 多域名 | `127.0.0.1 example.com test.com` | `127.0.0.1 example.com;test.com` |
-| 通配符 | ❌ 不支持 | ✅`192.168.100.52 *.example.com` |
-| 多通配规则 | ❌ 不支持 |✅ `192.168.100.52 *abc112.com;*abc113.com` |
-
-
-
+DNS-Splitter is a Windows client-side intelligent DNS and proxy splitter designed to improve productivity in complex multi-environment network scenarios.
+It provides a flexible and efficient way to manage multiple proxy and DNS routing strategies under an HTTP proxy mode.
 
 
 #### 其他链接
 
 | 类型      | 文件                             | 说明          |
 | ------- | ------------------------------ | ----------- |
+| 📝 中文文档 | [README_zh_CN.md](./README_zh_CN.md) | 中文文档 |
 | 🧭 帮助文档 | [help.md](./help.md)           | 使用指南与功能说明   |
 | 📝 更新日志 | [changelog.md](./changelog.md) | 版本更新记录与变更历史 |
 
 
+<img width="973" height="835" alt="image" src="https://github.com/user-attachments/assets/d98d5029-b022-4b96-b4fe-fdc5c9e0ee22" />
 
-#### 更新日志
-- 1.2.0.6
-> 增加高级功能
-1.  TLS 支持
-2.  自动生成与解析证书
-3.  权限校验（用户名/密码认证）
-4.  源 IP 校验
 
-#### TODO
+🚀 Features
+
+Smart DNS & Proxy Splitting
+Dynamically route traffic to different DNS servers or proxy endpoints based on domain rules or hosts configuration.
+
+Multi-Environment Access
+Easily access multiple environments (e.g., test, staging, production) for the same domain without switching configurations manually.
+
+HTTP Proxy Based
+Works entirely under an HTTP proxy mode, compatible with browsers and most client applications.
+
+Local & Secure
+Runs locally on Windows with optional TLS support, certificate management, and user authentication.
+
+Flexible Configuration
+Supports rule-based routing, multiple accounts, and granular access control.
+
+💡 Typical Use Case
+
+Imagine you are developing or debugging across several environments:
+
+Environment	Domain	Target
+Production	api.company.com	10.10.1.10
+Test Env 1	api.company.com	10.10.2.20
+Test Env 2	api.company.com	10.10.3.30
+
+With DNS-Splitter, you can access all of them at the same time without changing system DNS or proxy settings — simply define your rules, and it just works.
+
+⚙️ Key Capabilities
+
+Intelligent DNS routing
+
+HTTP/HTTPS proxy forwarding
+
+Multiple upstream DNS/DoH servers
+
+Per-domain proxy rules
+
+Auto TLS certificate generation
+
+Optional username/password authentication
+
+Hosts-like static overrides
