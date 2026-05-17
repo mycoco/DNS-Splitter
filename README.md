@@ -3,6 +3,16 @@ DNS-Splitter
 DNS-Splitter is a Windows client-side intelligent DNS and proxy splitter designed to improve productivity in complex multi-environment network scenarios.
 It provides a flexible and efficient way to manage multiple proxy and DNS routing strategies under an HTTP proxy mode.
 
+## Recommended Upgrade: dns-flow
+
+DNS-Splitter is the classic Windows implementation. [dns-flow](https://github.com/mycoco/dns-flow) is the redesigned and rebuilt version, with a cleaner routing workflow and continued product updates.
+
+New users are recommended to use dns-flow directly. Existing DNS-Splitter users are also encouraged to upgrade to dns-flow for a better experience.
+
+- Download dns-flow: [mycoco/dns-flow/releases](https://github.com/mycoco/dns-flow/releases)
+- Platform support: Windows and macOS
+- Feedback: [mycoco/dns-flow/issues](https://github.com/mycoco/dns-flow/issues)
+
 
 #### 其他链接
 

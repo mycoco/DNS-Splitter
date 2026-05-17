@@ -2,6 +2,16 @@
 ## HTTP代理模式下的DNS分流器
 > 当前项目仅提供使用说明与版本下载地址
 
+## 推荐升级到 dns-flow
+
+DNS-Splitter 是早期的 Windows 版本。新的 [dns-flow](https://github.com/mycoco/dns-flow) 是重构后的版本，保留网站访问分流能力，并优化了分流配置、规则管理、请求记录和软件更新体验。
+
+建议新用户直接使用 dns-flow；已有 DNS-Splitter 用户也建议升级到 dns-flow，以获得后续更新和更好的跨平台体验。
+
+- 下载 dns-flow：[mycoco/dns-flow/releases](https://github.com/mycoco/dns-flow/releases)
+- 支持平台：Windows、macOS
+- 问题反馈：[mycoco/dns-flow/issues](https://github.com/mycoco/dns-flow/issues)
+
 什么是dns-splitter: 是一个多端口代理工具,对请求代理实现分流上网功能. 用于满足开发与测试等的多环境同时连接。
 
 #### 主要功能
